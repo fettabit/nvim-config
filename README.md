@@ -142,10 +142,10 @@
 **Examples:**
 ```
 ysiw"     →  hello  becomes  "hello"
-ysa("     →  (foo)  becomes  ("foo")
+ysi("     →  (foo)  becomes  ("foo")
 cs"'      →  "hi"   becomes  'hi'
 ds"       →  "bye"  becomes  bye
-Vt        →  (visual line) becomes <t>...</t>
+VS"       →  (visual line) becomes  "..."
 ```
 
 ---
