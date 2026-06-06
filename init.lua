@@ -1,3 +1,5 @@
-require('config.options')
-require('config.keybinds')
-require('config.lazy')
+require("vim._core.ui2").enable({})
+require("config.options")
+require("config.keybinds")
+require("config.lazy")
+require("config.lsp")
