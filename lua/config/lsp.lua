@@ -91,6 +91,19 @@ vim.lsp.config['cssls'] = {
     },
 }
 
+vim.lsp.config['html'] = {
+    cmd          = { 'vscode-html-language-server', '--stdio' },
+    filetypes    = { 'html' },
+    root_markers = { 'package.json', '.git' },
+    settings     = {},
+}
+
+vim.lsp.config['emmet_language_server'] = {
+    cmd          = { 'emmet-language-server', '--stdio' },
+    filetypes    = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+    root_markers = { 'package.json', '.git' },
+}
+
 vim.lsp.config['rust_analyzer'] = {
     cmd          = { 'rust-analyzer' },
     filetypes    = { 'rust' },

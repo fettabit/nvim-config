@@ -16,6 +16,8 @@ return {
                     'lua-language-server',
                     'typescript-language-server',
                     'css-lsp',
+                    'html-lsp',
+                    'emmet-language-server',
                     'clangd',
                     'pyright',
                     -- Formatters

@@ -15,4 +15,12 @@ return {
             require('nvim-autopairs').setup({ check_ts = true })
         end,
     },
+    {
+        'kylechui/nvim-surround',
+        version = '*',
+        event   = 'VeryLazy',
+        config  = function()
+            require('nvim-surround').setup({})
+        end,
+    },
 }
