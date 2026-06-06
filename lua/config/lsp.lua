@@ -119,7 +119,14 @@ vim.lsp.config['rust_analyzer'] = {
 vim.lsp.config['clangd'] = {
     cmd          = { 'clangd' },
     filetypes    = { 'c', 'cpp', 'objc', 'objcpp' },
-    root_markers = { 'compile_commands.json', '.clangd', 'Makefile', '.git' },
+    root_dir     = function(bufnr, on_dir)
+        local fname = vim.api.nvim_buf_get_name(bufnr)
+        on_dir(vim.fs.root(fname, { 'compile_commands.json', '.clangd', 'Makefile', '.git' })
+            or vim.fn.fnamemodify(fname, ':h'))
+    end,
+    init_options = {
+        fallbackFlags = { '-std=c11' },
+    },
 }
 
 vim.lsp.config['nil_ls'] = {
