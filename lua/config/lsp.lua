@@ -1,6 +1,7 @@
 vim.diagnostic.config({
-    virtual_text  = true,
-    severity_sort = true,
+    virtual_text     = true,
+    update_in_insert = true,
+    severity_sort    = true,
     float         = {
         style  = 'minimal',
         border = 'rounded',
@@ -124,9 +125,6 @@ vim.lsp.config['clangd'] = {
         on_dir(vim.fs.root(fname, { 'compile_commands.json', '.clangd', 'Makefile', '.git' })
             or vim.fn.fnamemodify(fname, ':h'))
     end,
-    init_options = {
-        fallbackFlags = { '-std=c11' },
-    },
 }
 
 vim.lsp.config['nil_ls'] = {
